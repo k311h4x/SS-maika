@@ -204,7 +204,7 @@
       <h2>Contacto</h2>
       <div class="card" style="margin-top:12px;display:grid;grid-template-columns:1fr 360px;gap:16px">
         <div>
-          <form id="contactForm"  method="POST" enctype="text/plain" onsubmit="handleSubmit(event)">
+          <form id="contactForm" onsubmit="return false;">
             <label class="muted">Nombre</label>
             <input type="text" id="name" required placeholder="Tu nombre" />
             <label class="muted">Empresa / Giro</label>
