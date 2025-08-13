@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="es">
 <head>
@@ -8,11 +9,11 @@
   <link rel="icon" href="data:;base64,iVBORw0KGgo="> <!-- placeholder favicon -->
   <style>
     :root{
-      --bg:#0f1724;
+      --bg:#0f1724; /* deep navy */
       --card:#0b1220;
       --muted:#94a3b8;
-      --accent:#06b6d4;
-      --accent-2:#7c3aed;
+      --accent:#06b6d4; /* cyan */
+      --accent-2:#7c3aed; /* purple */
       --glass:rgba(255,255,255,0.03);
       --radius:14px;
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
@@ -20,30 +21,38 @@
     *{box-sizing:border-box}
     body{margin:0;background:linear-gradient(180deg,var(--bg),#071021);color:#e6eef8;line-height:1.5}
     .container{max-width:1100px;margin:0 auto;padding:28px}
+
     header{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
     .brand{display:flex;gap:12px;align-items:center}
     .logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;font-weight:700;box-shadow:0 6px 20px rgba(0,0,0,0.5)}
     .logo svg{width:34px;height:34px}
     h1.site{margin:0;font-size:20px}
     p.tag{margin:0;color:var(--muted);font-size:13px}
+
     nav{display:flex;gap:12px;align-items:center}
     nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:14px}
     .cta{background:linear-gradient(90deg,var(--accent),var(--accent-2));padding:10px 14px;border-radius:10px;color:#021124;text-decoration:none;font-weight:700}
+
     .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:40px 0}
     .hero h2{font-size:34px;margin:0 0 10px}
     .hero p{color:var(--muted);margin:0 0 18px}
     .features{display:flex;gap:10px;flex-wrap:wrap}
     .feature{background:var(--glass);padding:12px;border-radius:12px;min-width:160px}
     .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:var(--radius);box-shadow:0 8px 30px rgba(2,6,23,0.6)}
+
     .services{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}
     .service{padding:16px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));min-height:150px}
     .service h3{margin:6px 0 8px}
     .service p{color:var(--muted);font-size:14px}
+
     form{display:flex;flex-direction:column;gap:10px}
     input,textarea,select{background:#071021;border:1px solid rgba(255,255,255,0.04);padding:12px;border-radius:8px;color:inherit}
     .btn{display:inline-block;padding:12px 16px;border-radius:10px;text-decoration:none;font-weight:700;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#021124;border:none;cursor:pointer}
+
     footer{margin-top:40px;padding:24px 0;border-top:1px solid rgba(255,255,255,0.03);display:flex;justify-content:space-between;align-items:center}
     .small{color:var(--muted);font-size:13px}
+
+    /* responsive */
     @media (max-width:960px){
       .hero{grid-template-columns:1fr}
       .services{grid-template-columns:repeat(2,1fr)}
@@ -53,6 +62,8 @@
       header{flex-direction:column;align-items:flex-start;gap:14px}
       nav{width:100%;justify-content:space-between}
     }
+
+    /* small utility */
     .muted{color:var(--muted)}
     .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.025);font-weight:700}
     .grid-cols-2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
@@ -63,6 +74,7 @@
     <header>
       <div class="brand">
         <div class="logo" aria-hidden>
+          <!-- simple monogram -->
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M4 20h16V4H4v16z" fill="white" opacity="0.06" />
             <path d="M7 17V7h3v10H7zM14 17V7h3v10h-3z" fill="white" />
@@ -73,6 +85,7 @@
           <p class="tag">Impulsamos tu negocio. Tú enfócate en lo demás.</p>
         </div>
       </div>
+
       <nav>
         <a href="#servicios">Servicios</a>
         <a href="#nosotros">Nosotros</a>
@@ -84,20 +97,25 @@
     <section class="hero">
       <div>
         <h2>Consultoría TI en Ciudad Juárez — Hardware · Redes · Software</h2>
-        <p>Soporte local confiable para PYMES: auditoría inicial gratuita, asistencia remota y planes mensuales de mantenimiento.</p>
+        <p>Soporte local confiable para PYMES: auditoría inicial gratuita, asistencia remota y planes mensuales de mantenimiento. Más de soluciones prácticas para que tu negocio no pare.</p>
+
         <div class="card">
           <div class="features">
             <div class="feature"><strong>Auditorías</strong><div class="muted">Revisión de infraestructura y recomendaciones</div></div>
             <div class="feature"><strong>Servicios en la nube </strong><div class="muted">Planes con tiempo de respuesta garantizado</div></div>
             <div class="feature"><strong>Backup & Seguridad</strong><div class="muted">Copias automatizadas y políticas de acceso</div></div>
           </div>
+
           <div style="margin-top:16px;display:flex;gap:10px;align-items:center">
             <a class="btn" href="#contacto">Solicitar auditoría</a>
-            <a class="pill" href="https://wa.me/526568428404" id="waLink">WhatsApp</a>
+            <a class="pill" href="https://wa.me/52XXXXXXXXXX" id="waLink">WhatsApp</a>
             <span class="muted" style="margin-left:auto;font-size:13px">📍 Ciudad Juárez</span>
           </div>
         </div> 
+
+        <div style="margin-top:18px;color:var(--muted);font-size:14px">Clientes típicos: consultorios, despachos contables, restaurantes, pymes manufactureras y colegios privados.</div>
       </div>
+
       <aside>
         <div class="card">
           <h3 style="margin-top:0">Planes rápidos</h3>
@@ -106,19 +124,52 @@
             <div style="display:flex;justify-content:space-between;align-items:center"><strong>Soporte Pro</strong><span class="muted">$3,800 MXN/mes</span></div>
             <div style="display:flex;justify-content:space-between;align-items:center"><strong>Auditoría + Remediación</strong><span class="muted">Desde $2,500 MXN</span></div>
           </div>
+
+          <hr style="border:none;border-top:1px solid rgba(255,255,255,0.03);margin:14px 0" />
+          <div class="muted">Precios referenciales — personaliza según alcance. ¿Quieres que calcule un paquete para un cliente específico? Responde con el tipo de empresa y # de equipos.</div>
         </div>
       </aside>
     </section>
 
     <section id="servicios">
-      <h2>Nuestros servicios</h2>
+      <h2 style="margin-bottom:8px">Nuestros servicios</h2>
+      <p class="muted">Soluciones prácticas y escalables — nos adaptamos al tamaño de tu negocio.</p>
+
       <div class="services">
-        <article class="service"><h3>Soporte y Mantenimiento</h3><p>Mantenimiento preventivo y soporte remoto/onsite.</p></article>
-        <article class="service"><h3>Redes y Conectividad</h3><p>Instalación de redes cableadas/Wi-Fi, VLAN y VPN.</p></article>
-        <article class="service"><h3>Seguridad y Backups</h3><p>Políticas de respaldo y hardening básico.</p></article>
-        <article class="service"><h3>Instalación y Configuración</h3><p>Montaje de equipos y software empresarial.</p></article>
-        <article class="service"><h3>Auditorías TI</h3><p>Reporte con hallazgos y plan de remediación.</p></article>
-        <article class="service"><h3>Desarrollo a medida</h3><p>Automatizaciones, scripts e integraciones.</p></article>
+        <article class="service">
+          <h3>Soporte y Mantenimiento</h3>
+          <p>Mantenimiento preventivo, limpieza de equipos, optimización de estaciones y soporte remoto/onsite.</p>
+          <ul class="muted" style="margin-top:8px">
+            <li>Soporte remoto AnyDesk / RustDesk</li>
+            <li>Monitoreo básico</li>
+            <li>Ticketing y SLA</li>
+          </ul>
+        </article>
+
+        <article class="service">
+          <h3>Redes y Conectividad</h3>
+          <p>Instalación de redes cableadas/Wi‑Fi, segmentación VLAN, VPN y solución de problemas de conectividad.</p>
+        </article>
+
+        <article class="service">
+          <h3>Seguridad y Backups</h3>
+          <p>Políticas de respaldo, cifrado de datos, endpoints y hardening básico de servidores y estaciones.</p>
+        </article>
+
+        <article class="service">
+          <h3>Instalación y Configuración</h3>
+          <p>Montaje de equipos, servidores, NAS, impresoras en red y software empresarial (contabilidad, POS).</p>
+        </article>
+
+        <article class="service">
+          <h3>Auditorías TI</h3>
+          <p>Reporte con hallazgos, priorización de riesgos y plan de remediación práctico.</p>
+        </article>
+
+        <article class="service">
+          <h3>Desarrollo a medida</h3>
+          <p>Automatizaciones simples, scripts, integraciones y pequeñas apps internas.</p>
+        </article>
       </div>
     </section>
 
@@ -126,30 +177,82 @@
       <h2>Nosotros</h2>
       <div class="card" style="margin-top:12px;display:flex;gap:16px;align-items:center">
         <div style="flex:0 0 120px">
-          <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=800" alt="equipo" style="width:120px;height:120px;object-fit:cover;border-radius:12px">
+          <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="equipo" style="width:120px;height:120px;object-fit:cover;border-radius:12px;filter:grayscale(.05)">
         </div>
         <div>
-          <h3>Somos especialistas locales</h3>
-          <p class="muted">Servicios de hardware, redes y software con enfoque en resultados rápidos y seguridad práctica.</p>
+          <h3 style="margin:0">Somos especialistas locales</h3>
+          <p class="muted">Ofrecemos servicios de hardware, redes y software con enfoque en resultados rápidos y seguridad práctica. Trabajamos con PYMES en Ciudad Juárez y la región.</p>
+
+          <div style="margin-top:10px;display:flex;gap:8px">
+            <div style="text-align:center">
+              <div style="font-weight:800;font-size:20px">25</div>
+              <div class="muted" style="font-size:13px">Consultores</div>
+            </div>
+            <div style="text-align:center">
+              <div style="font-weight:800;font-size:20px">+150</div>
+              <div class="muted" style="font-size:13px">Incidentes atendidos</div>
+            </div>
+            <div style="text-align:center">
+              <div style="font-weight:800;font-size:20px">📍</div>
+              <div class="muted" style="font-size:13px">Cd. Juárez</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="contacto" style="margin-top:26px">
       <h2>Contacto</h2>
-      <div class="card" style="margin-top:12px;padding:16px;display:flex;flex-direction:column;gap:12px">
-        <a class="btn" href="#futuro-formulario">Llenar datos próximamente</a>
-        <a class="btn" href="https://wa.me/526568428404?text=Hola%20SS%20Maika%20TI%2C%20quiero%20una%20auditor%C3%ADa" target="_blank">Contactar por WhatsApp</a>
-        <div class="muted">
-          Teléfono: <strong>+52 6568428404</strong><br>
-          Email: <strong>amaroocon@gmail.com</strong><br>
-          Horario: Lun–Vie 9:00–18:00
+      <div class="card" style="margin-top:12px;display:grid;grid-template-columns:1fr 360px;gap:16px">
+        <div>
+          <form id="contactForm" onsubmit="return false;">
+            <label class="muted">Nombre</label>
+            <input type="text" id="name" required placeholder="Tu nombre" />
+            <label class="muted">Empresa / Giro</label>
+            <input type="text" id="company" placeholder="Nombre de la empresa" />
+            <label class="muted">Teléfono o WhatsApp</label>
+            <input type="text" id="phone" placeholder="55 1234 5678" />
+            <label class="muted">Email</label>
+            <input type="email" id="email" required placeholder="mail@empresa.com" />
+            <label class="muted">Mensaje / ¿Qué necesitas?</label>
+            <textarea id="message" rows="4" placeholder="Describe brevemente lo que necesitas"></textarea>
+            <div style="display:flex;gap:8px;margin-top:8px">
+              <button class="btn" type="submit">Enviar</button>
+              <a class="btn" href="https://wa.me/52XXXXXXXXXX?text=Hola%20SS Maikap%20TI%20quiero%20una%20auditor%C3%ADa" target="_blank">Contactar por WhatsApp</a>
+            </div>
+          </form>
+
+          <script>
+            function handleSubmit(e){
+              // Simple fallback que abre mailto con cuerpo prellenado
+              e.preventDefault();
+              const name = document.getElementById('name').value;   
+              const company = document.getElementById('company').value;
+              const phone = document.getElementById('phone').value;
+              const email = document.getElementById('email').value;
+              const message = document.getElementById('message').value;
+              const subject = encodeURIComponent('Contacto - Auditoría TI');
+              const body = encodeURIComponent(`Nombre: ${name}%0AEmpresa: ${company}%0ATeléfono: ${phone}%0AEmail: ${email}%0A%0AMensaje:%0A${message}`);
+              window.location.href = `mailto:tuemail@dominio.com?subject=${subject}&body=${body}`;
+            }
+          </script>
         </div>
+
+        <aside style="padding:12px">
+          <h3>Datos</h3>
+          <p class="muted">Teléfono: <strong>+52 6568428404</strong><br>Email: <strong>amaroocon@gmail.com</strong><br>Horario: Lun–Vie 9:00–18:00</p>
+          <div style="margin-top:12px">
+            <h4 class="muted">¿Prefieres una llamada?</h4>
+            <a class="btn" href="tel:+52XXXXXXXXXX">Llámanos</a>
+          </div>
+        </aside>
       </div>
+
+      
     </section>
 
     <footer>
-      <div class="small">© SS Maika TI — Ciudad Juárez · 2025</div>
+      <div class="small">© SS Maika TI — Ciudad Juárez · {2025}</div>
       <div class="small">Hecho con ☕ · <a href="#nosotros" style="color:var(--muted);text-decoration:none">Contáctanos</a></div>
     </footer>
   </div>
